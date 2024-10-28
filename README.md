@@ -1,6 +1,6 @@
-# table-translater-vscode README
+# table-paster-vscode README
 
-This is the README for your extension "table-translater-vscode". After writing up a brief description, we recommend including the following sections.
+This is the README for your extension "table-paster-vscode". After writing up a brief description, we recommend including the following sections.
 
 ## Features
 
