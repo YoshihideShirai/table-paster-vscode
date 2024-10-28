@@ -1,5 +1,10 @@
-# Adapted from https://github.com/octan3/img-clipboard-dump/blob/master/dump-clipboard-png.ps1
 Add-Type -Assembly System.Windows.Forms
-Add-Type -Assembly PresentationCore
+Add-Type -AssemblyName System.Text.Encoding
 
-Get-Clipboard -Format Text -TextFormatType Html
+if ([System.Windows.Forms.Clipboard]::ContainsData("HTML Format")) {
+    $html = [System.Windows.Forms.Clipboard]::GetData("HTML Format")
+    $utf8Encoding = [System.Text.Encoding]::UTF8
+    $bytes = $utf8Encoding.GetBytes($html)
+    $html_utf8 = $utf8Encoding.GetString($bytes)
+    Write-Output $html_utf8
+}
