@@ -14,12 +14,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "table-paster-vscode.helloWorld",
-        "title": "Hello World"
-      },
-      {
         "command": "table-paster-vscode.pasteTable",
-        "title": "Table Paster : Paste"
+        "title": "Table Paster : Paste table of clipboard"
       }
     ],
     "menus": {

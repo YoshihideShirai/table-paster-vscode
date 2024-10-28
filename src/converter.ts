@@ -51,7 +51,7 @@ function EscapeContentForAdocTableCell(s: string) {
 	return s;
 }
 
-export function parseHtmlTextAndConvertToAdoc(tableText: string) {
+function parseHtmlTextAndConvertToAdoc(tableText: string) {
 	let sb = '|===\n';
 
 	let lastStartTag = null;
@@ -115,3 +115,12 @@ export function parseHtmlTextAndConvertToAdoc(tableText: string) {
 
 	return sb;
 }
+
+function tableConverter(languageId: string, htmltable: string): string {
+	if (languageId === "asciidoc") {
+		return parseHtmlTextAndConvertToAdoc(htmltable) ?? "";
+	}
+	return htmltable;
+}
+
+export { tableConverter };
