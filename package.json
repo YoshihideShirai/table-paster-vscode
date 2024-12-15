@@ -49,5 +49,8 @@
     "@vscode/test-electron": "^2.4.1",
     "eslint": "^9.11.1",
     "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "asciidoctor": "^3.0.4"
   }
 }
