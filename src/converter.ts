@@ -61,7 +61,7 @@ function parseHtmlTextAndConvertToAdoc(tableText: string) {
 	let infLoopCheckCount = 1000000; // for debug
 
 	let m;
-	while ((m = rxTag.exec(tableText)) != null) {
+	while ((m = rxTag.exec(tableText)) !== null) {
 		infLoopCheckCount--;
 		if (infLoopCheckCount <= 0) { return; }
 		//console.log(m[1]);
